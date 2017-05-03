@@ -1,5 +1,11 @@
 azekjfhaerhgeraguireahugh
+<<<<<<< HEAD
 
 test gg
 
 avant merge
+=======
+ioufigzjbvigavehby
+
+ajout 
+>>>>>>> Branche
