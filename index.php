@@ -1,19 +1,11 @@
-<?php
+<?php session_start();
 
-require('./common.php');
+require_once('ini.php');
+require_once('vendors/SPDO.php');
 
-if (!empty($_POST['u1']) && !empty($_POST['u2'])) {
+require_once('classes/gameModel.php');
 
-    $j1_deck = array( 'u_id' => 1, 'u_name' => 'superman', 'u_mana' => 2, 'u_life' => 5, 'u_atk' => 3, 'u_type' => 'Soldier', 'u_urlFront' => NULL, 'u_urlBack' => NULL, 'u_wait' => 0 );
-    $j2_deck = array( 'u_id' => 2, 'u_name' => 'queen', 'u_mana' => 3, 'u_life' => 10, 'u_atk' => 2, 'u_type' => 'Soldier', 'u_urlFront' => NULL, 'u_urlBack' => NULL, 'u_wait' => 0 );
-
-    $j1 = new Card($j1_deck);
-    $j2 = new Card($j2_deck);
-    $_SESSION['timeSavious']['J1'] = $j1;
-    $_SESSION['timeSavious']['J2'] = $j2;
-
-    var_dump($_SESSION['timeSavious']);
-}
+$game = new GameModel($gameID = null, $imageID = null, $id_user1 = null, $id_user2 = null);
 
 ?>
 

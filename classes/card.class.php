@@ -8,6 +8,7 @@ class Card
     private $_mana;
     private $_life;
     private $_atk;
+    private $_desc;
     private $_type;
     private $_urlFront;
     private $_urlBack;
@@ -65,6 +66,14 @@ class Card
         }
     }
 
+    public function getDesc(){
+        return $this->_atk;
+    }
+
+    public function setDesc($_desc){
+        $this->_atk = $_atk;
+    }
+
     public function getType(){
         return $this->_type;
     }
@@ -108,14 +117,14 @@ class Card
 
     public function sendDamage(Card $_opponent, $_damage){
         if ($this->_type == 'Spell') {
-            $_opponent->receiceDamage($_damage);
+            $_opponent->receiveDamage($_damage);
         }else{
-            $_opponent->receiceDamage($_damage);
+            $_opponent->receiveDamage($_damage);
             $this->_life -= $_opponent->getAtk();
         }
     }
 
-    public function receiceDamage($_damage){
+    public function receiveDamage($_damage){
         $this->_life -= $_damage;
     }
 

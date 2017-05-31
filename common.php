@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 function autoload($file) {
     $url = './classes/'. strtolower($file).'.class.php';
     if (file_exists($url)) {
