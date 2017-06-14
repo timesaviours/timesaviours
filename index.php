@@ -5,9 +5,14 @@ require_once('vendors/SPDO.php');
 
 require_once('classes/gameModel.php');
 
-$game = new GameModel($gameID = null, $imageID = null, $id_user1 = null, $id_user2 = null);
+if ( !empty($_POST['1']) && !empty($_POST['2']) ) {
+    var_dump($_POST);
+    $game = new GameModel;
+    $game->newGame( $_POST['1'], $_POST['2'] );
+}
 
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -16,10 +21,10 @@ $game = new GameModel($gameID = null, $imageID = null, $id_user1 = null, $id_use
         <title>TimeSaviours</title>
     </head>
     <body>
-        <h1>TimeSaviours</h1>
+        <h1>TimeSaviours 2</h1>
         <form method="post">
-            <input type="text" name="u1" placeholder="Joueur 1">
-            <input type="text" name="u2" placeholder="Joueur 2">
+            <input type="text" name="1" value="1" placeholder="Joueur 1">
+            <input type="text" name="2" value="2" placeholder="Joueur 2">
             <input type="Submit" name="game_start" value="Commencer la partie">
         </form>
     </body>
