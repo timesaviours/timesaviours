@@ -60,15 +60,15 @@ class CoreModel
                 }
                 if ( ($result = $sth->execute()) != false ) {
                     return $this->_pdo->lastInsertId();
-                } else 
+                } else {
                     return false;
                 }
             } else {
                 if ( ($sth = $this->_pdo->query($req) != false )) {
                     return $this->_pdo->lastInsertId();
-                } else {
-                    return false;
-                }
+                } //else {
+                  //  return false;
+              //  }
             }
             break;
 

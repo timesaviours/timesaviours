@@ -4,6 +4,7 @@ require_once('ini.php');
 require_once('vendors/SPDO.php');
 
 require_once('classes/gameModel.php');
+require_once('classe/image.class.php');
 
 if ( !empty($_POST['1']) && !empty($_POST['2']) ) {
     var_dump($_POST);
@@ -26,5 +27,14 @@ if ( !empty($_POST['1']) && !empty($_POST['2']) ) {
             <input type="text" name="2" value="2" placeholder="Joueur 2">
             <input type="Submit" name="game_start" value="Commencer la partie">
         </form>
+        <div >
+            <?php
+                $card = new image('1');
+                var_dump($card);
+
+
+             ?>
+
+        </div>
     </body>
 </html>

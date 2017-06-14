@@ -1,4 +1,5 @@
 <?php
+require_once('imageModel.php');
 
 class Image
 {
