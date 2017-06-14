@@ -6,7 +6,9 @@ class Game
     private $_g_id;
     private $_i_id;
     private $_u_id_user1;
+    private $_u_deck_user1;
     private $_u_id_user2;
+    private $_u_deck_user2;
 
 
     public function __construct($array){
@@ -46,6 +48,22 @@ class Game
 
 	public function setUIdUser2($_u_id_user2){
 		$this->_u_id_user2 = $_u_id_user2;
+	}
+
+	public function getDeckdUser1(){
+		return $this->_u_deck_user1;
+	}
+
+	public function setDeckUser1($_u_deck_user1){
+		$this->_u_deck_user1 = $_u_deck_user1;
+	}
+
+	public function getDeckdUser2(){
+		return $this->_u_deck_user2;
+	}
+
+	public function setDeckUser2($_u_deck_user2){
+		$this->_u_deck_user2 = $_u_deck_user2;
 	}
 
     private function hydrate($array){

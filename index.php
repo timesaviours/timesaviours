@@ -13,7 +13,6 @@ if ( !empty($_POST['1']) && !empty($_POST['2']) ) {
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <head>

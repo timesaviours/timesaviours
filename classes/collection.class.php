@@ -1,6 +1,6 @@
 <?php
 
-class Card
+class Collection
 {
 
     private $_id;
@@ -10,9 +10,7 @@ class Card
     private $_atk;
     private $_desc;
     private $_type;
-    private $_urlFront;
-    private $_urlBack;
-    private $_wait;
+    private $_image;
 
     public function __construct($array){
         $this->hydrate($array);
@@ -82,29 +80,15 @@ class Card
         $this->_type = $_type;
     }
 
-    public function getUrlFront(){
-        return $this->_url_front;
+
+    public function getUrlImage(){
+        return $this->_image;
     }
 
-    public function setUrlFront($_url_front){
-        $this->_url_front = $_url_front;
+    public function setUrlImage($_image){
+        $this->_image = $_image;
     }
 
-    public function getUrlBack(){
-        return $this->_url_back;
-    }
-
-    public function setUrlBack($_url_back){
-        $this->_url_back = $_url_back;
-    }
-
-    public function getWait(){
-        return $this->_wait;
-    }
-
-    public function setWait($_wait){
-        $this->_wait = $_wait;
-    }
 
     private function hydrate($array){
         foreach ($array as $key => $value) {
