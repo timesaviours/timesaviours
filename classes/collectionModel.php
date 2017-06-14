@@ -9,6 +9,7 @@ class CardModel extends CoreModel
     {
         $this->_pdo = $pdo;
     }
+    
 
 
 

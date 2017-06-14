@@ -102,14 +102,22 @@ class Collection
     public function sendDamage(Card $_opponent, $_damage){
         if ($this->_type == 'Spell') {
             $_opponent->receiveDamage($_damage);
-        }else{
+        }
+        if(Card $_opponent == 'Taunt'){
+          $_opponenet->receiveDamage($_damage);
+        }
+        else{
             $_opponent->receiveDamage($_damage);
-            $this->_life -= $_opponent->getAtk();
+            if($_opponent['life'] > 0){
+              $this->_life -= $_opponent->getAtk();
+            }
         }
     }
 
     public function receiveDamage($_damage){
         $this->_life -= $_damage;
     }
+
+
 
 }

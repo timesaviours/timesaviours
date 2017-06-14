@@ -60,7 +60,7 @@ class CoreModel
                 }
                 if ( ($result = $sth->execute()) != false ) {
                     return $this->_pdo->lastInsertId();
-                } else {
+                } else 
                     return false;
                 }
             } else {
