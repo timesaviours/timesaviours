@@ -12,5 +12,5 @@ class GameModel extends CoreModel
         $req="INSERT INTO `game`(`u_id_user1`, `u_id_user2`) VALUES ( :uid1, :uid2 )";
         return $this->executeQuery($req, array('uid1' => $u_id_1, 'uid2' => $u_id_2));
     }
-
+    // fffzfg
 }
