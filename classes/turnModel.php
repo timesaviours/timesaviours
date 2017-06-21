@@ -4,9 +4,6 @@ require_once('core/coreModel.php');
 
 class TurnModel extends CoreModel
 {
-    public function __construct() {
-        parent::__construct();
-    }
 
     public function newTurn( $g_id, $u_id ) {
         $req="INSERT INTO `turn`(`g_id`, `u_id`) VALUES ( :gId, :uId )";
