@@ -65,11 +65,11 @@ class Collection
     }
 
     public function getDesc(){
-        return $this->_atk;
+        return $this->_desc;
     }
 
     public function setDesc($_desc){
-        $this->_atk = $_atk;
+        $this->_desc = $_desc;
     }
 
     public function getType(){
