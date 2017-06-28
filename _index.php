@@ -4,7 +4,7 @@ require_once('ini.php');
 require_once('vendors/SPDO.php');
 
 require_once('classes/gameModel.php');
-require_once('classe/image.class.php');
+require_once('classes/image.class.php');
 
 if ( !empty($_POST['1']) && !empty($_POST['2']) ) {
     var_dump($_POST);

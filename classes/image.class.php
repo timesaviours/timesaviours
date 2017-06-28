@@ -52,10 +52,11 @@ class Image
     private function hydrate($array){
         foreach ($array as $key => $value) {
             $method = 'set'.ucfirst(substr($key, 0, 2));
-        }
+
         if (method_exists($this, $method)) {
             $this->$method = $value;
         }
+      }
     }
 
   /************************fonction recuperer une image***********************
@@ -63,7 +64,7 @@ class Image
   return => array
 ********************************************************************************/
     public function image($id){
-      $image = nex imageModel;
+      $image = new imageModel;
       $image-> getImage($id);
       return $image;
     }

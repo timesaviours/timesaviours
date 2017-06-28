@@ -1,6 +1,7 @@
 <?php
 
 require_once('ini.php');
+require_once('vendors/SPDO.php');
 
 class CoreModel
 {

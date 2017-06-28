@@ -18,3 +18,9 @@
  {
   text-align: center;
  }
+
+#user_head
+{
+  display: flex;
+
+}

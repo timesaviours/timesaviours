@@ -1,50 +1,54 @@
 <?php
   include('views/header.page.php');
+
+  var_dump($_POST);
  ?>
     <main>
       <h1 id="title1">Inscription</h1>
 
-      <form class="form-horizontal" action="index.html" method="post">
+      <form class="form-horizontal" name="register" action="?c=page&a=register" method="post">
         <div class="form-group">
           <label for="name" class="col-lg-2 control-label">Nom</label>
           <div class="col-lg-8">
-            <input type="text" class="form-control" id="name" placeholder="Nom">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Nom">
           </div>
          </div>
 
         <div class="form-group">
           <label for="firstname" class="col-lg-2 control-label">Prenom</label>
           <div class="col-lg-8">
-            <input type="text" class="form-control" id="firstname" placeholder="Prenom">
+            <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Prenom">
           </div>
       </div>
 
       <div class="form-group">
+        <label for="login" class="col-lg-2 control-label">Login</label>
+        <div class="col-lg-8">
+          <input type="text" name="login" class="form-control" id="login" placeholder="login">
+        </div>
+    </div>
+
+      <div class="form-group">
         <label for="email" class="col-lg-2 control-label">Mail</label>
         <div class="col-lg-8">
-          <input type="email" class="form-control" id="email" placeholder="Prenom">
+          <input type="email" name="email" class="form-control" id="email" placeholder="Prenom">
         </div>
     </div>
 
     <div class="form-group">
       <label for="password" class="col-lg-2 control-label">Mot de passe </label>
       <div class="col-lg-8">
-        <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+        <input type="password" name="password" class="form-control" id="password" placeholder="Mot de passe">
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="presentation" class="col-lg-2 control-label">Presentation</label>
-      <div class="col-lg-8">
-        <textarea class="form-control" rows="3" placeholder="présentation"></textarea>
-      </div>
-    </div>
+
 
     <div class="form-group">
     <div class="col-sm-offset-2 col-sm-8">
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="1"> Recevoir notre news letter
+          <input type="checkbox" name="news" value="1"> Recevoir notre news letter
         </label>
 
         </div>
